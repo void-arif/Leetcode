@@ -1,0 +1,27 @@
+Take two queues 
+queue<TreeNode*> q1;
+queue<TreeNode*> q2;
+Then repeatedly check:
+Pop one node from each queue.
+
+Check if both are null.
+Are both empty?
+    Yes -> continue
+
+
+Check if exactly one is null.
+Is one empty and the other not?
+    Yes -> false
+
+    
+Check if values differ.
+Do they contain different values?
+    Yes -> false
+
+    
+Push corresponding children.
+
+If the loop finishes without finding a mismatch:
+
+return q1.empty() && q2.empty();
+
