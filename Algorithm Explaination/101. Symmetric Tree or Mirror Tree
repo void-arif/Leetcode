@@ -1,0 +1,12 @@
+First we check if the root is null, if it is null then we consider that as mirror and return true.
+We create two queue, one for the left side another for the right side.
+We push root->left in queue Left and root->right in queue Right
+while Left not empty and Right not empty:
+We first Take the front(x from Left,y from Right) from both queues and pop them.
+if both X and Y both are Null we continue
+if only either of them are null, we return false.
+if the value of x and y dont match, we return false
+We push x->left then x->right in Left
+We push y->right then y->left in Right.
+
+After the while loop runs out, we return Left.empty() and Right.empty()
