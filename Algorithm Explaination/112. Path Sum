@@ -1,0 +1,13 @@
+Method 1:
+Preorder Traversal with remaining sum-
+if root null: return false
+if leaf node: return remaining==root->val
+remaining-=root->value
+return preorder(left side)||preorder(right side)
+
+Method 2:
+Preorder Traversal with Current sum-
+if root null : return false;
+current sum+=root->value
+if leaf node: return curSum==TargetSum
+return preorder(left side)||preorder(right side)
