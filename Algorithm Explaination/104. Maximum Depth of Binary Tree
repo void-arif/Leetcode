@@ -1,0 +1,14 @@
+DFS:
+Return 0 if the root node is Null
+return the max(Left side recursion,Right side recursion)+1
+
+BFS:
+Return 0 if the root node is Null
+make a queue and push the root
+level=0
+while(q no empty)
+take the size of the q
+for(i 0 to size)
+do the basic bfs traversals
+out of the for loop level++;
+out of the while loop return level
