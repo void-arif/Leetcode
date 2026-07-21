@@ -1,0 +1,22 @@
+The hard way-
+we create a whole new inverted tree.
+if root is null: return root
+create a newroot = new TreeNode(root->val)
+create two queue: oldq,newq;
+push newroot,root
+while(queues are not empty):
+  take the front of the both queues
+  pop them
+  if(root left):
+    create a newNode= new TreeNode(root->left)
+    then connect it with the newroot's right
+    push root's left and newroot's right to their respective queue
+  if(root right):
+    create a newNode=new TreeNode(root->right)
+    then connect it with the newroot's left
+    push root's right and newroot's left to their respective queue
+return newroot
+----------------------------------------------------------------------
+The easier way:
+just swap their children while bfs traversing (I know dawg its that easy)
+swap(node->left, node->right);
